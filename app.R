@@ -2,7 +2,7 @@ library(tidyverse)
 library(lubridate)
 library(plotly)
 library(shiny)
-load("data/system.Rdata")
+load("system.Rdata")
 
 zscore_outlier <- function(x){
   y = which( ((x-mean(x))/sd(x)) < -3 | ((x-mean(x))/sd(x)) >3 )
